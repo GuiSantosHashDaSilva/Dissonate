@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://cbwyg3mj3hk30"]
+
+[ext_resource type="Texture2D" uid="uid://lumkcmjuvdav" path="res://Assets/UI/menuback.png" id="1_346fi"]
+
+[sub_resource type="Theme" id="Theme_00eoc"]
+default_font_size = 50
+
+[sub_resource type="Theme" id="Theme_parux"]
+default_font_size = 50
+
+[sub_resource type="Theme" id="Theme_iea66"]
+default_font_size = 50
+
+[sub_resource type="Theme" id="Theme_bxwsj"]
+default_font_size = 50
+
+[node name="mainmenu" type="Control" unique_id=156623289]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=18970539]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="TextureRect" type="TextureRect" parent="Panel" unique_id=1358226980]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_346fi")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=1304521516]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.13000001
+anchor_top = 0.41311115
+anchor_right = 0.31
+anchor_bottom = 0.75492597
+offset_left = -0.60002136
+offset_top = -0.16003418
+offset_right = -0.2000122
+offset_bottom = -0.32006836
+metadata/_edit_use_anchors_ = true
+
+[node name="botaojogar" type="Button" parent="Panel/VBoxContainer" unique_id=1277885300]
+layout_mode = 2
+theme = SubResource("Theme_00eoc")
+text = "Jogar"
+
+[node name="botaoopcoes" type="Button" parent="Panel/VBoxContainer" unique_id=1798414069]
+layout_mode = 2
+theme = SubResource("Theme_parux")
+text = "Opções"
+
+[node name="botaocreditos" type="Button" parent="Panel/VBoxContainer" unique_id=1550658721]
+layout_mode = 2
+theme = SubResource("Theme_iea66")
+text = "Créditos"
+
+[node name="botaosair" type="Button" parent="Panel/VBoxContainer" unique_id=824838608]
+layout_mode = 2
+theme = SubResource("Theme_bxwsj")
+text = "Sair"
