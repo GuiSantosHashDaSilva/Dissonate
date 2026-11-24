@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://btu2ca3d7xwlu" path="res://Assets/Chars/maincharspritesheet.png" id="1_cw6fv"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_00eoc"]
-radius = 5.0
-height = 18.0
+radius = 11.5
+height = 36.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4eojn"]
 atlas = ExtResource("1_cw6fv")
@@ -385,7 +385,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"idle",
-"speed": 5.0
+"speed": 6.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -463,18 +463,18 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="mainchar" type="CharacterBody2D" unique_id=184953530 node_paths=PackedStringArray("animacao")]
+[node name="mainchar" type="CharacterBody2D" unique_id=184953530]
 scale = Vector2(4, 4)
 script = ExtResource("1_4eojn")
-animacao = NodePath("AnimatedSprite2D")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1063848868]
+position = Vector2(1, 2)
 shape = SubResource("CapsuleShape2D_00eoc")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=433825765]
 texture_filter = 1
 position = Vector2(-2, -2)
+scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_00eoc")
-animation = &"correndo"
-frame = 2
-frame_progress = 0.8430713
+animation = &"idle"
+frame_progress = 0.67550004
