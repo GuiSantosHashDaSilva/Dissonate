@@ -183,7 +183,7 @@ scale = Vector2(1.85, 1.85)
 texture = ExtResource("5_6b0bb")
 script = ExtResource("10_b44f5")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="background/bg-1" unique_id=1581057013]
+[node name="vboxmainmenu" type="VBoxContainer" parent="background/bg-1" unique_id=1581057013]
 anchors_preset = -1
 anchor_left = 0.108
 anchor_top = 0.731
@@ -196,7 +196,7 @@ offset_bottom = -236.31468
 rotation = -0.13788101
 metadata/_edit_use_anchors_ = true
 
-[node name="bjogar" type="Button" parent="background/bg-1/VBoxContainer" unique_id=552661622]
+[node name="bjogar" type="Button" parent="background/bg-1/vboxmainmenu" unique_id=552661622]
 texture_filter = 1
 custom_maximum_size = Vector2(95, 13)
 layout_mode = 2
@@ -204,7 +204,7 @@ theme = SubResource("Theme_neg8r")
 text = "Jogar"
 flat = true
 
-[node name="bconfig" type="Button" parent="background/bg-1/VBoxContainer" unique_id=202854358]
+[node name="bconfig" type="Button" parent="background/bg-1/vboxmainmenu" unique_id=202854358]
 texture_filter = 1
 custom_maximum_size = Vector2(95, 13)
 layout_mode = 2
@@ -212,7 +212,7 @@ theme = SubResource("Theme_rsmnt")
 text = "Opções"
 flat = true
 
-[node name="bcreditos" type="Button" parent="background/bg-1/VBoxContainer" unique_id=663033317]
+[node name="bcreditos" type="Button" parent="background/bg-1/vboxmainmenu" unique_id=663033317]
 texture_filter = 1
 custom_maximum_size = Vector2(95, 13)
 layout_mode = 2
@@ -220,7 +220,7 @@ theme = SubResource("Theme_b44f5")
 text = "Créditos"
 flat = true
 
-[node name="bsair" type="Button" parent="background/bg-1/VBoxContainer" unique_id=2056562143]
+[node name="bsair" type="Button" parent="background/bg-1/vboxmainmenu" unique_id=2056562143]
 texture_filter = 1
 custom_maximum_size = Vector2(95, 13)
 layout_mode = 2
@@ -243,10 +243,11 @@ frame_progress = 0.76826334
 
 [node name="personagem" type="AnimatedSprite2D" parent="." unique_id=1099057562]
 texture_filter = 1
-position = Vector2(291, 867)
-scale = Vector2(2, 2)
+position = Vector2(291, 862)
+scale = Vector2(2.5, 2.5)
 sprite_frames = SubResource("SpriteFrames_t7v2k")
 autoplay = "default"
 frame_progress = 0.06665528
 
-[connection signal="pressed" from="background/bg-1/VBoxContainer/bsair" to="." method="_on_bsair_pressed"]
+[connection signal="pressed" from="background/bg-1/vboxmainmenu/bjogar" to="." method="_on_bjogar_pressed"]
+[connection signal="pressed" from="background/bg-1/vboxmainmenu/bsair" to="." method="_on_bsair_pressed"]

@@ -13,3 +13,7 @@ func _process(delta: float) -> void:
 
 func _on_bsair_pressed() -> void:
 	get_tree().quit()
+
+
+func _on_bjogar_pressed() -> void:
+	get_tree().change_scene_to_file("res://Cenas/mapa_1.tscn")

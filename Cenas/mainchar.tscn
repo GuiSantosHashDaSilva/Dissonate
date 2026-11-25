@@ -5,7 +5,7 @@
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_00eoc"]
 radius = 11.5
-height = 36.0
+height = 28.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4eojn"]
 atlas = ExtResource("1_cw6fv")
@@ -464,17 +464,16 @@ animations = [{
 }]
 
 [node name="mainchar" type="CharacterBody2D" unique_id=184953530]
-scale = Vector2(4, 4)
 script = ExtResource("1_4eojn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1063848868]
-position = Vector2(1, 2)
+position = Vector2(0, 1)
 shape = SubResource("CapsuleShape2D_00eoc")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=433825765]
 texture_filter = 1
 position = Vector2(-2, -2)
-scale = Vector2(2, 2)
+scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_00eoc")
 animation = &"idle"
 frame_progress = 0.67550004
