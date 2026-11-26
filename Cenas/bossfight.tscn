@@ -1,22 +1,43 @@
 [gd_scene format=3 uid="uid://b7ledfl0rgjx3"]
 
 [ext_resource type="Texture2D" uid="uid://c2lfirih46hdc" path="res://Assets/UI/bossfight.png" id="1_cb1w0"]
-[ext_resource type="PackedScene" uid="uid://br2f7md0tgsqp" path="res://Cenas/mainchar.tscn" id="2_rs6dx"]
+[ext_resource type="PackedScene" uid="uid://6l2v81cgh3oe" path="res://Cenas/plataforma_movel.tscn" id="2_rs6dx"]
+[ext_resource type="Script" uid="uid://x3487rppj3wb" path="res://Scripts/metronomo/metronomo.gd" id="3_nqpot"]
+[ext_resource type="Script" uid="uid://b2drokgl37a5r" path="res://Scripts/spawnerplataforma/spawner_plataformas.gd" id="4_0n8ou"]
+[ext_resource type="PackedScene" uid="uid://br2f7md0tgsqp" path="res://Cenas/mainchar.tscn" id="5_oyb4h"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_00eoc"]
 
 [node name="bossfight" type="Node2D" unique_id=906817753]
 
+[node name="Panel" type="Panel" parent="." unique_id=642162785]
+offset_right = 1920.0
+offset_bottom = 890.0
+
 [node name="TextureRect" type="TextureRect" parent="." unique_id=772087035]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 5.0
+offset_top = -96.0
+offset_right = 1925.0
+offset_bottom = 984.0
 texture = ExtResource("1_cb1w0")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=190245068]
+[node name="metronomo" type="Node" parent="." unique_id=1496865939 groups=["metronome"]]
+script = ExtResource("3_nqpot")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1422721163]
-position = Vector2(960, 818)
+[node name="PlataformaMovel" parent="." unique_id=836563941 instance=ExtResource("2_rs6dx")]
+position = Vector2(2271, 221)
+
+[node name="SpawnerPlataformas" type="Marker2D" parent="." unique_id=1236019111]
+position = Vector2(1925, 692)
+script = ExtResource("4_0n8ou")
+platform_scene = ExtResource("2_rs6dx")
+platform_speed = 500.0
+
+[node name="mainchar" parent="." unique_id=184953530 instance=ExtResource("5_oyb4h")]
+position = Vector2(268.4713, 524.91675)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=376056]
+position = Vector2(690, 732)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=269803013]
 shape = SubResource("WorldBoundaryShape2D_00eoc")
-
-[node name="mainchar" parent="." unique_id=184953530 instance=ExtResource("2_rs6dx")]
-position = Vector2(330, 616)
